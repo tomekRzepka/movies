@@ -1,7 +1,5 @@
 package dev.tomrzepka.movies.movie
 
-import dev.tomrzepka.movies.movie.Movie
-import dev.tomrzepka.movies.movie.MovieRepository
 import lombok.RequiredArgsConstructor
 import org.springframework.stereotype.Service
 import java.util.*

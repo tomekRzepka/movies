@@ -20,6 +20,6 @@ class ReviewService(private val repository: ReviewRepository, private val mongoT
             .apply(update("reviewsIds", review))
             .findAndModify()
 
-        return review;
+        return review
     }
 }
