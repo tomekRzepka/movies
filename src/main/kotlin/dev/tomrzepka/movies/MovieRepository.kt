@@ -1,4 +1,4 @@
-package dev.tomrzepka.movies.db
+package dev.tomrzepka.movies
 
 import org.bson.types.ObjectId
 import org.springframework.data.mongodb.repository.MongoRepository

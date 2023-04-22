@@ -1,4 +1,4 @@
-package dev.tomrzepka.movies.db
+package dev.tomrzepka.movies
 
 import lombok.AllArgsConstructor
 import lombok.Data
