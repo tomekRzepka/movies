@@ -18,8 +18,8 @@ class MovieController(private val movieService: MovieService) {
         return ResponseEntity(movieService.allMovies(), HttpStatus.OK)
     }
 
-    @GetMapping("/{id}")
-    fun getSingleMovie(@PathVariable("id") objectId: ObjectId): ResponseEntity<Optional<Movie>> {
-        return ResponseEntity(movieService.singleMovie(objectId), HttpStatus.OK)
+    @GetMapping("/{imdbId}")
+    fun getSingleMovie(@PathVariable("imdbId") imdbId: String): ResponseEntity<Optional<Movie>> {
+        return ResponseEntity(movieService.singleMovie(imdbId), HttpStatus.OK)
     }
 }
