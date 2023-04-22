@@ -1,4 +1,4 @@
-package dev.tomrzepka.movies
+package dev.tomrzepka.movies.movie
 
 import lombok.AllArgsConstructor
 import lombok.Data
@@ -13,6 +13,10 @@ import org.springframework.data.mongodb.core.mapping.Document
 @NoArgsConstructor
 data class Review(
     @Id
-    val objectId: ObjectId,
-    val body: String
-)
+    val objectId: ObjectId = ObjectId(),
+    var body: String = ""
+) {
+    constructor(body: String) : this() {
+        this.body = body
+    }
+}

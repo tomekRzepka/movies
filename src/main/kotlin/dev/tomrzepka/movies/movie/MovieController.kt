@@ -1,6 +1,5 @@
-package dev.tomrzepka.movies
+package dev.tomrzepka.movies.movie
 
-import org.bson.types.ObjectId
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.GetMapping
@@ -10,10 +9,10 @@ import org.springframework.web.bind.annotation.RestController
 import java.util.*
 
 @RestController
-@RequestMapping("/api/v1")
+@RequestMapping("/api/v1/movies")
 class MovieController(private val movieService: MovieService) {
 
-    @GetMapping("/movies")
+    @GetMapping
     fun getAllMovies(): ResponseEntity<List<Movie>> {
         return ResponseEntity(movieService.allMovies(), HttpStatus.OK)
     }
